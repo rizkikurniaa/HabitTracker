@@ -28,6 +28,7 @@ kotlin {
     sourceSets {
         androidMain.dependencies {
             implementation(libs.androidx.activity.compose)
+            implementation(libs.androidx.compose.ui.tooling.preview)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -71,4 +72,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+}
+
+dependencies {
+    debugImplementation(libs.androidx.compose.ui.tooling)
 }
